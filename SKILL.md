@@ -8,7 +8,7 @@ description: >
   scanning, refactoring, PR review, code quality, SAST, CodeRabbit, CodiumAI, code smell,
   best practices, AI code reviewer, CI/CD, 代码审查, 代码质量, 代码重构, 安全扫描,
   pull request, 静态分析, 代码规范.
-version: "3.0.0"
+version: "3.0.1"
 ---
 
 # AI Code Review Expert
