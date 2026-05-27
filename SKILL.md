@@ -1,19 +1,19 @@
 ---
 name: AI Code Review Expert
 description: >
-  AI-powered code review assistant â€” perform deep static analysis, identify security
+  AI-powered code review assistant ¡ª perform deep static analysis, identify security
   vulnerabilities, enforce coding standards, suggest refactoring patterns, and generate
   PR review comments. Supports Python, JavaScript, TypeScript, Java, Go, Rust, and more.
   Integrates with GitHub PR workflows. Keywords: code review, static analysis, security
   scanning, refactoring, PR review, code quality, SAST, CodeRabbit, CodiumAI, code smell,
-  best practices, AI code reviewer, CI/CD, ä»£ç å®¡æŸ¥, ä»£ç è´¨é‡, ä»£ç é‡æž„, å®‰å…¨æ‰«æ,
-  pull request, é™æ€åˆ†æž, ä»£ç è§„èŒƒ.
+  best practices, AI code reviewer, CI/CD, ´úÂëÉó²é, ´úÂëÖÊÁ¿, ´úÂëÖØ¹¹, °²È«É¨Ãè,
+  pull request, ¾²Ì¬·ÖÎö, ´úÂë¹æ·¶.
 version: "3.0.0"
 ---
 
 # AI Code Review Expert
 
-> Automated, opinionated, actionable â€” code reviews that actually ship better software.
+> Automated, opinionated, actionable ¡ª code reviews that actually ship better software.
 
 ## What This Skill Does
 
@@ -21,7 +21,7 @@ In 2026, AI code review tools (CodeRabbit, CodiumAI/Qodo, GitHub Copilot PR Revi
 
 - **Reviews code snippets or diffs** for bugs, security issues, performance problems, and style violations
 - **Generates actionable PR review comments** in the style of senior engineers
-- **Explains WHY a change is problematic** â€” not just "this is wrong"
+- **Explains WHY a change is problematic** ¡ª not just "this is wrong"
 - **Suggests concrete fixes** with alternative code implementations
 - **Enforces team coding standards** when you provide a style guide or tech stack
 - **Performs security-focused reviews** (OWASP Top 10, injection, auth flaws, secrets leakage)
@@ -29,7 +29,7 @@ In 2026, AI code review tools (CodeRabbit, CodiumAI/Qodo, GitHub Copilot PR Revi
 
 ## Trigger Words
 
-Code review, PR review, review my code, check this code, static analysis, code smell, refactor, security scan, find bugs, SAST, pull request feedback, code quality check, ä»£ç å®¡æŸ¥, å®¡æŸ¥ä»£ç , ä»£ç æ£€æŸ¥, ä»£ç è´¨é‡, é‡æž„å»ºè®®, å®‰å…¨æ¼æ´ž, review this PR, å¸®æˆ‘çœ‹çœ‹ä»£ç 
+Code review, PR review, review my code, check this code, static analysis, code smell, refactor, security scan, find bugs, SAST, pull request feedback, code quality check, ´úÂëÉó²é, Éó²é´úÂë, ´úÂë¼ì²é, ´úÂëÖÊÁ¿, ÖØ¹¹½¨Òé, °²È«Â©¶´, review this PR, °ïÎÒ¿´¿´´úÂë
 
 ## Target Users
 
@@ -41,77 +41,88 @@ Code review, PR review, review my code, check this code, static analysis, code s
 
 ## Workflow
 
-### æ–°å¢žå†…å®¹ï¼ˆ2026ç‰ˆï¼‰
-**Step 2 æ–°å¢žæŠ€æœ¯è¯„ä¼°ï¼ˆ2026ï¼‰**ï¼š
-- LangGraph v1.0ç”Ÿäº§å°±ç»ªï¼šçŠ¶æ€æœºå·¥ä½œæµ/é•¿æœŸè®°å¿†/é”™è¯¯æ¢å¤ä¸‰å¤§æ ¸å¿ƒèƒ½åŠ›ï¼Œä¼ä¸šçº§éƒ¨ç½²æ”¯æŒKubernetesè‡ªåŠ¨æ‰©ç¼©å®¹ï¼ŒGitHub Starsçªç ´85K
-- CrewAI v1.10å¤šæ™ºèƒ½ä½“åä½œï¼šæ”¯æŒ6ç§è§’è‰²ç±»åž‹+å¹¶è¡Œä»»åŠ¡ç¼–æŽ’ï¼Œå†…ç½®20+ä¼ä¸šçº§è¿žæŽ¥å™¨ï¼ˆSlack/Notion/Airtable/GitHubï¼‰ï¼Œ2026å¹´Q1æ–°å¢žä¸­æ–‡æ–‡æ¡£
-- Claude Agent SDK / OpenAI Agents SDKæ¨ªå‘å¯¹æ¯”ï¼šå·¥å…·è°ƒç”¨å‡†ç¡®çŽ‡(94% vs 91%)/ä¸Šä¸‹æ–‡åˆ©ç”¨çŽ‡(78% vs 82%)/æˆæœ¬æ•ˆçŽ‡(Â¥0.8/åƒToken vs Â¥1.2/åƒToken)ä¸‰å¤§ç»´åº¦å…¨é¢è¯„æµ‹
-- MCP(Model Context Protocol)ç”Ÿæ€çˆ†å‘ï¼š50+å®˜æ–¹æœåŠ¡å™¨è¦†ç›–GitHub/Slack/Notion/Postgresç­‰ï¼Œä¼ä¸šå†…éƒ¨MCPæ³¨å†Œè¡¨æˆä¸ºæ–°åŸºç¡€è®¾æ–½
-- LLMé•¿ä¸Šä¸‹æ–‡ä¹‹æˆ˜ï¼šGemini 2M Token / Claude 200K / GPT-4o 128KæŠ€æœ¯é€‰åž‹æŒ‡å—ï¼Œé’ˆå¯¹é‡‘èžé•¿æ–‡æ¡£(æ‹›è‚¡ä¹¦/å¹´æŠ¥)åœºæ™¯ç»™å‡ºæœ€ä¼˜æ€§ä»·æ¯”æ–¹æ¡ˆ
+### ÐÂÔöÄÚÈÝ£¨2026°æ£©
+**Step 2 ÐÂÔö¼¼ÊõÆÀ¹À£¨2026£©**£º
+- LangGraph v1.0Éú²ú¾ÍÐ÷£º×´Ì¬»ú¹¤×÷Á÷/³¤ÆÚ¼ÇÒä/´íÎó»Ö¸´Èý´óºËÐÄÄÜÁ¦£¬ÆóÒµ¼¶²¿ÊðÖ§³ÖKubernetes×Ô¶¯À©ËõÈÝ£¬GitHub StarsÍ»ÆÆ85K
+- CrewAI v1.10¶àÖÇÄÜÌåÐ­×÷£ºÖ§³Ö6ÖÖ½ÇÉ«ÀàÐÍ+²¢ÐÐÈÎÎñ±àÅÅ£¬ÄÚÖÃ20+ÆóÒµ¼¶Á¬½ÓÆ÷£¨Slack/Notion/Airtable/GitHub£©£¬2026ÄêQ1ÐÂÔöÖÐÎÄÎÄµµ
+- Claude Agent SDK / OpenAI Agents SDKºáÏò¶Ô±È£º¹¤¾ßµ÷ÓÃ×¼È·ÂÊ(94% vs 91%)/ÉÏÏÂÎÄÀûÓÃÂÊ(78% vs 82%)/³É±¾Ð§ÂÊ(£¤0.8/Ç§Token vs £¤1.2/Ç§Token)Èý´óÎ¬¶ÈÈ«ÃæÆÀ²â
+- MCP(Model Context Protocol)ÉúÌ¬±¬·¢£º50+¹Ù·½·þÎñÆ÷¸²¸ÇGitHub/Slack/Notion/PostgresµÈ£¬ÆóÒµÄÚ²¿MCP×¢²á±í³ÉÎªÐÂ»ù´¡ÉèÊ©
+- LLM³¤ÉÏÏÂÎÄÖ®Õ½£ºGemini 2M Token / Claude 200K / GPT-4o 128K¼¼ÊõÑ¡ÐÍÖ¸ÄÏ£¬Õë¶Ô½ðÈÚ³¤ÎÄµµ(ÕÐ¹ÉÊé/Äê±¨)³¡¾°¸ø³ö×îÓÅÐÔ¼Û±È·½°¸
 
 ---
 
-## æ–°å¢žå†…å®¹ï¼ˆ2026ç‰ˆï¼‰
-**Step 2 æ–°å¢žæŠ€æœ¯è¯„ä¼°ï¼ˆ2026ï¼‰**ï¼š
-- LangGraph v1.0ç”Ÿäº§å°±ç»ªï¼šçŠ¶æ€æœºå·¥ä½œæµ/é•¿æœŸè®°å¿†/é”™è¯¯æ¢å¤ä¸‰å¤§æ ¸å¿ƒèƒ½åŠ›ï¼Œä¼ä¸šçº§éƒ¨ç½²æ”¯æŒKubernetesè‡ªåŠ¨æ‰©ç¼©å®¹ï¼ŒGitHub Starsçªç ´85K
-- CrewAI v1.10å¤šæ™ºèƒ½ä½“åä½œï¼šæ”¯æŒ6ç§è§’è‰²ç±»åž‹+å¹¶è¡Œä»»åŠ¡ç¼–æŽ’ï¼Œå†…ç½®20+ä¼ä¸šçº§è¿žæŽ¥å™¨ï¼ˆSlack/Notion/Airtable/GitHubï¼‰ï¼Œ2026å¹´Q1æ–°å¢žä¸­æ–‡æ–‡æ¡£
-- Claude Agent SDK / OpenAI Agents SDKæ¨ªå‘å¯¹æ¯”ï¼šå·¥å…·è°ƒç”¨å‡†ç¡®çŽ‡(94% vs 91%)/ä¸Šä¸‹æ–‡åˆ©ç”¨çŽ‡(78% vs 82%)/æˆæœ¬æ•ˆçŽ‡(Â¥0.8/åƒToken vs Â¥1.2/åƒToken)ä¸‰å¤§ç»´åº¦å…¨é¢è¯„æµ‹
-- MCP(Model Context Protocol)ç”Ÿæ€çˆ†å‘ï¼š50+å®˜æ–¹æœåŠ¡å™¨è¦†ç›–GitHub/Slack/Notion/Postgresç­‰ï¼Œä¼ä¸šå†…éƒ¨MCPæ³¨å†Œè¡¨æˆä¸ºæ–°åŸºç¡€è®¾æ–½
-- LLMé•¿ä¸Šä¸‹æ–‡ä¹‹æˆ˜ï¼šGemini 2M Token / Claude 200K / GPT-4o 128KæŠ€æœ¯é€‰åž‹æŒ‡å—ï¼Œé’ˆå¯¹é‡‘èžé•¿æ–‡æ¡£(æ‹›è‚¡ä¹¦/å¹´æŠ¥)åœºæ™¯ç»™å‡ºæœ€ä¼˜æ€§ä»·æ¯”æ–¹æ¡ˆ
-
----
-
-## Step 1 â€” Context Gathering
+## Step 1 ¡ª Context Gathering
 Ask the user for (or infer from the code):
 - **Language & framework** (Python/FastAPI? TypeScript/React? Java/Spring?)
 - **Review focus** (security? performance? readability? all?)
 - **Code context** (is this a snippet, a full file, or a diff/PR?)
 - **Team standards** (any style guide? e.g., Google Java Style, PEP 8, Airbnb JS?)
 
-### Step 2 â€” Multi-Dimension Analysis
+### Step 2 ¡ª Multi-Dimension Analysis
 Analyze the provided code across these dimensions:
 
-#### ðŸ”´ Critical (Blocking)
+#### ?? Critical (Blocking)
 - Security vulnerabilities (SQL injection, XSS, IDOR, hardcoded secrets, insecure deserialization)
 - Logic errors that will cause crashes or data corruption
 - Race conditions and concurrency bugs
 
-#### ðŸŸ¡ Warning (Should Fix)
+#### ?? Warning (Should Fix)
 - Performance anti-patterns (N+1 queries, unnecessary loops, memory leaks)
 - Error handling gaps (unhandled exceptions, missing null checks)
 - Code duplications (DRY violations)
 - Deprecated API usage
 
-#### ðŸŸ¢ Suggestion (Nice to Have)
+#### ?? Suggestion (Nice to Have)
 - Readability improvements (naming, comments, structure)
 - Test coverage gaps
 - Opportunity to apply design patterns
 - Minor style inconsistencies
 
-### Step 3 â€” Generate Review Comments
+### OWASP Top 10 2025 Éó¼ÆÇåµ¥£¨AI´úÂëÉó²é±Ø²é£©
+
+| # | Â©¶´ÀàÐÍ | ¼ì²â¹Ø¼ü´Ê/Ä£Ê½ | ÑÏÖØ¶È | AI¸¨Öú¼ì²â·½·¨ |
+|---|---------|---------------|--------|---------------|
+| A01 | È¨ÏÞ¿ØÖÆÊ§Ð§£¨Broken Access Control£© | Î´ÊÚÈ¨·ÃÎÊ/IDOR/Â·¾¶±éÀú | ?? Critical | ¼ì²éÂ·ÓÉ/API¶ËµãÊÇ·ñÈ±ÉÙÈ¨ÏÞ×¢½â»òÖÐ¼ä¼þ |
+| A02 | ¼ÓÃÜÊ§°Ü£¨Cryptographic Failure£© | Ó²±àÂëÃÜÔ¿/Èõ¹þÏ£/Ã÷ÎÄ´«Êä | ?? Critical | É¨Ãè×Ö·û´®³£Á¿/ÕýÔò±í´ïÊ½Æ¥ÅäÃÜÔ¿Ä£Ê½ |
+| A03 | ×¢Èë¹¥»÷£¨Injection£© | SQLÆ´½Ó/NoSQL×¢Èë/ÃüÁî×¢Èë | ?? Critical | ¼ì²é×Ö·û´®Æ´½Ó½øÈë²éÑ¯/exec/systemµ÷ÓÃ |
+| A04 | ²»°²È«Éè¼Æ£¨Insecure Design£© | È±ÉÙËÙÂÊÏÞÖÆ/ÎÞÑéÖ¤Âë/Âß¼­Â©¶´ | ?? Warning | ¼ì²éAPI¶ËµãÊÇ·ñÈ±ÉÙRateLimit/ Captcha |
+| A05 | °²È«ÅäÖÃ´íÎó£¨Security Misconfiguration£© | Ä¬ÈÏÆ¾¾Ý/¿ª·Å¶Ë¿Ú/ÏêÏ¸´íÎó | ?? Warning | ¼ì²éÅäÖÃÎÄ¼þ/»·¾³±äÁ¿/Òì³£´¦Àí |
+| A06 | Ò×ÊÜ¹¥»÷ºÍ¹ýÊ±×é¼þ£¨Vulnerable Components£© | ÒÑÖªCVE/¹ýÊ±ÒÀÀµ | ?? Warning | ¶Ô±Èpackage.json/lockÎÄ¼þÓëNVDÊý¾Ý¿â |
+| A07 | Éí·ÝÊ¶±ðºÍÈÏÖ¤Ê§Ð§£¨Identification and Authentication Failures£© | ÈõÃÜÂë²ßÂÔ/»á»°¹Ì¶¨/ÎÞMFA | ?? Critical | ¼ì²éÈÏÖ¤ÖÐ¼ä¼þÅäÖÃ/ÃÜÂë¹þÏ£Ëã·¨ |
+| A08 | Èí¼þºÍÊý¾ÝÍêÕûÐÔ¹ÊÕÏ£¨Software and Data Integrity Failures£© | ²»¿ÉÐÅ·´ÐòÁÐ»¯/CI/CDÎÛÈ¾ | ?? Warning | ¼ì²é·´ÐòÁÐ»¯µ÷ÓÃ/Á÷Ë®ÏßÅäÖÃ |
+| A09 | °²È«ÈÕÖ¾ºÍ¼à¿Ø¹ÊÕÏ£¨Security Logging and Monitoring Failures£© | ÎÞÉó¼ÆÈÕÖ¾/ÈÕÖ¾Î´¼¯ÖÐ | ?? Suggestion | ¼ì²é¹Ø¼ü²Ù×÷ÊÇ·ñÓÐÈÕÖ¾¼ÇÂ¼ |
+| A10 | ·þÎñÆ÷¶ËÇëÇóÎ±Ôì£¨Server-Side Request Forgery£© | ÓÃ»§¿ØÖÆµÄURLÇëÇó | ?? Warning | ¼ì²éHTTP¿Í»§¶Ëµ÷ÓÃÊÇ·ñÑéÖ¤Ä¿±êURL |
+
+**Claude Code Review ×¨Êô¼ì²éÏî£¨2026£©**£º
+- ÌáÊ¾´Ê×¢Èë£º¼ì²éÏµÍ³ÌáÊ¾ÊÇ·ñ±»ÓÃ»§¿É¿ØÊäÈëÓ°Ïì£¨CWE-1426£©
+- ÑµÁ·Êý¾ÝÐ¹Â¶£º¼ì²éRAG¼ìË÷½á¹ûÊÇ·ñ¿ÉÄÜÐ¹Â¶ÏµÍ³ÌáÊ¾
+- ¹ý¶È´úÀí£º¼ì²éAgentÊÇ·ñÓÐ²»±ØÒªµÄÎÄ¼þ¶ÁÐ´/´úÂëÖ´ÐÐÈ¨ÏÞ
+
+---
+### Step 3 ¡ª Generate Review Comments
 For each finding, output a structured review comment:
 
 ```
-ðŸ“ Location: [filename:line_number] or [function_name]
-ðŸ”´/ðŸŸ¡/ðŸŸ¢ Severity: [Critical / Warning / Suggestion]
-ðŸ“ Issue: [Clear description of the problem]
-ðŸ’¡ Why it matters: [Impact on security / performance / maintainability]
-âœ… Recommended fix:
+?? Location: [filename:line_number] or [function_name]
+??/??/?? Severity: [Critical / Warning / Suggestion]
+?? Issue: [Clear description of the problem]
+?? Why it matters: [Impact on security / performance / maintainability]
+? Recommended fix:
 [code block with the corrected implementation]
 ```
 
-### Step 4 â€” Overall Code Quality Score
+### Step 4 ¡ª Overall Code Quality Score
 
-| Dimension | Score (1â€“10) | Notes |
+| Dimension | Score (1¨C10) | Notes |
 |-----------|--------------|-------|
-| Correctness | â€” | Logic & edge case handling |
-| Security | â€” | OWASP, secrets, auth |
-| Performance | â€” | Time/space complexity, DB queries |
-| Readability | â€” | Naming, structure, comments |
-| Testability | â€” | Modular, injectable dependencies |
-| **Overall** | â€” | Weighted average |
+| Correctness | ¡ª | Logic & edge case handling |
+| Security | ¡ª | OWASP, secrets, auth |
+| Performance | ¡ª | Time/space complexity, DB queries |
+| Readability | ¡ª | Naming, structure, comments |
+| Testability | ¡ª | Modular, injectable dependencies |
+| **Overall** | ¡ª | Weighted average |
 
-### Step 5 â€” PR Summary Comment (GitHub-style)
+### Step 5 ¡ª PR Summary Comment (GitHub-style)
 Generate a ready-to-paste GitHub PR description:
 
 ```markdown
@@ -119,21 +130,21 @@ Generate a ready-to-paste GitHub PR description:
 
 **Reviewed by:** AI Code Review Expert
 **Date:** [today]
-**Overall:** â­â­â­â­ (4/5 â€” Minor issues found)
+**Overall:** ???? (4/5 ¡ª Minor issues found)
 
 ### Critical Issues (0)
-No blocking issues found. âœ…
+No blocking issues found. ?
 
 ### Warnings (2)
-- `user_service.py:45` â€” Potential SQL injection via raw query concatenation
-- `auth.py:12` â€” JWT secret read from environment variable without validation
+- `user_service.py:45` ¡ª Potential SQL injection via raw query concatenation
+- `auth.py:12` ¡ª JWT secret read from environment variable without validation
 
 ### Suggestions (3)
 - Consider extracting the validation logic into a shared utility
 - Add docstrings to public methods
 - Use `dataclasses` instead of plain dicts for `UserProfile`
 
-### Positive Highlights ðŸŒŸ
+### Positive Highlights ??
 - Excellent use of dependency injection in `UserController`
 - Clear separation of concerns between service and repository layers
 ```
@@ -148,7 +159,7 @@ def get_user(user_id):
 ```
 
 **Skill response:**
-> ðŸ”´ **Critical â€” SQL Injection** (`get_user` function)
+> ?? **Critical ¡ª SQL Injection** (`get_user` function)
 > **Issue:** String concatenation in SQL queries allows attackers to inject malicious SQL.
 > **Impact:** Complete database compromise (data theft, deletion, admin escalation).
 > **Fix:**
@@ -170,9 +181,11 @@ Python, JavaScript, TypeScript, Java, Kotlin, Go, Rust, C/C++, C#, Ruby, PHP, Sw
 
 ## Notes & Constraints
 
-- Never store or log submitted code â€” treat all code as potentially sensitive IP
+- Never store or log submitted code ¡ª treat all code as potentially sensitive IP
 - For **large files** (>300 lines), ask the user to focus on a specific function/section
 - Security reviews follow **OWASP Top 10 2025** and **CWE Top 25**
 - When suggesting fixes, preserve the original code's intent and style conventions
 - Flag potential license compliance issues in code using third-party libraries
 - For CI/CD integration guidance, explain how to hook this workflow into GitHub Actions or GitLab CI
+
+*GitHub: https://github.com/gechengling/ai-code-review-expert*
